@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hive Mind — Bee Swarm Simulation</title>
+  <style>
+    :root{color-scheme:dark;font-family:system-ui,Segoe UI,Arial,sans-serif;background:#101319;color:#f7f3e7}
+    body{margin:0;padding:22px;max-width:1080px;margin-inline:auto}
+    h1{margin:.1em 0}.muted{color:#b8b4aa} .controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:16px 0}
+    button,input{accent-color:#e7b953}button{background:#e7b953;color:#141414;border:0;border-radius:8px;padding:9px 15px;cursor:pointer;font-weight:700}
+    canvas{display:block;width:100%;height:auto;border:1px solid #564825;border-radius:10px;background:#161b25;touch-action:none}
+  </style>
+</head>
+<body>
+  <h1>Hive Mind <span aria-hidden="true">🐝</span></h1>
+  <p class="muted">An early-stage, personally owned bee-swarm simulation. Click or tap the canvas to place an attraction point.</p>
+  <div class="controls">
+    <label for="count">Bees: <output id="countLabel">80</output></label>
+    <input id="count" type="range" min="20" max="220" step="10" value="80" />
+    <button id="pause">Pause</button><button id="reset">Reset</button>
+    <span class="muted">Local rules: separation, alignment, cohesion, and attraction</span>
+  </div>
+  <canvas id="scene" width="1000" height="600" aria-label="Animated bee swarm visualization"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
